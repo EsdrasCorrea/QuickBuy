@@ -1,15 +1,20 @@
 import { Component } from "@angular/core";
+import { Usuario } from "../../modelo/Usuario";
 
 @Component({
   selector: "app-login",
   templateUrl: "./login.component.html",
   styleUrls: ["./login.component.css"]
-
 })
 export class LoginComponent {
+  public usuario;
 
+  constructor() {
+    this.usuario = new Usuario();
+  }
 
   entrar() {
-    alert('Entrar no sistema');
+    if (this.usuario.email == "esdras@gmail.com" && this.usuario.senha == "abc123") {
+    } 
   }
 }
